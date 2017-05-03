@@ -1,6 +1,6 @@
 node {
-    checkout scm
-    
+  checkout scm
+  stage('Build') {
     sh 'ls -la '
     
     def jobname = env.JOB_NAME
@@ -12,4 +12,5 @@ node {
       if (buildnum == build.getNumber().toInteger()) { continue; println "equals" } 
       build.doStop();
     }
+  }
 }
