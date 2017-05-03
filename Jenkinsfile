@@ -6,4 +6,6 @@ node {
          extensions: scm.extensions,
          userRemoteConfigs: scm.userRemoteConfigs
     ])
+    new File('foo').mkdir()
+    sh 'ls -la'
  }
